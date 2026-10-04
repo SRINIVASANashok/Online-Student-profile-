@@ -9,7 +9,7 @@ export const INITIAL_STUDENTS: Student[] = [
     phone: '(555) 234-5678',
     dateOfBirth: '2003-04-14',
     gender: 'Female',
-    avatarUrl: '/src/assets/images/student_portrait_aria_1791112696537.jpg',
+    avatarUrl: '/students/student_aria.jpg',
     address: {
       street: '452 University Ave, Apt 3B',
       city: 'Cambridge',
@@ -49,7 +49,7 @@ export const INITIAL_STUDENTS: Student[] = [
     phone: '(555) 432-8765',
     dateOfBirth: '2002-11-20',
     gender: 'Male',
-    avatarUrl: '/src/assets/images/student_portrait_marcus_1791112707165.jpg',
+    avatarUrl: '/students/student_marcus.jpg',
     address: {
       street: '128 College Hill Rd',
       city: 'Austin',
@@ -88,7 +88,7 @@ export const INITIAL_STUDENTS: Student[] = [
     phone: '(555) 345-9812',
     dateOfBirth: '2003-08-05',
     gender: 'Female',
-    avatarUrl: '/src/assets/images/student_portrait_elena_1791112715272.jpg',
+    avatarUrl: '/students/student_elena.jpg',
     address: {
       street: '720 Beacon Street',
       city: 'Boston',
@@ -127,7 +127,7 @@ export const INITIAL_STUDENTS: Student[] = [
     phone: '(555) 678-1234',
     dateOfBirth: '2002-06-18',
     gender: 'Male',
-    avatarUrl: '/src/assets/images/student_portrait_rohan_1791112724569.jpg',
+    avatarUrl: '/students/student_rohan.jpg',
     address: {
       street: '89 North Quadrangle Rd',
       city: 'Chicago',
@@ -166,7 +166,7 @@ export const INITIAL_STUDENTS: Student[] = [
     phone: '(555) 890-4321',
     dateOfBirth: '2004-02-28',
     gender: 'Female',
-    avatarUrl: undefined,
+    avatarUrl: '/students/student_zoe.jpg',
     address: {
       street: '310 Willowbrook Dr',
       city: 'Seattle',
@@ -205,7 +205,7 @@ export const INITIAL_STUDENTS: Student[] = [
     phone: '(555) 567-8901',
     dateOfBirth: '2001-09-12',
     gender: 'Male',
-    avatarUrl: undefined,
+    avatarUrl: '/students/student_tariq.jpg',
     address: {
       street: '512 Pioneer Way',
       city: 'Ann Arbor',

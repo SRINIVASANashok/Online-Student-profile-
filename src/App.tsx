@@ -9,17 +9,24 @@ import { GpaCalculatorView } from './components/GpaCalculatorView';
 import { DeleteConfirmModal } from './components/DeleteConfirmModal';
 import { ToastContainer, ToastMessage } from './components/Toast';
 
-const STORAGE_KEY = 'online_student_profiles_v1';
+const STORAGE_KEY = 'online_student_profiles_v2';
 
 export default function App() {
   // Students state loaded from LocalStorage or mock data
   const [students, setStudents] = useState<Student[]>(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('online_student_profiles_v1');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          // Migrate any outdated image paths to neat static assets
+          return parsed.map((s) => {
+            const defaultMatch = INITIAL_STUDENTS.find((init) => init.id === s.id);
+            if (defaultMatch && (!s.avatarUrl || s.avatarUrl.includes('/src/assets') || s.avatarUrl.includes('images.unsplash.com'))) {
+              return { ...s, avatarUrl: defaultMatch.avatarUrl };
+            }
+            return s;
+          });
         }
       }
     } catch (e) {
