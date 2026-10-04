@@ -1,0 +1,6 @@
+{
+  "name": "Online Student Profile",
+  "description": "An interactive, responsive portal to add, edit, calculate, and display academic and personal student profiles with GPA calculation and directory filtering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
